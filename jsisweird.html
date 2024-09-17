@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Js is weird</title>
+    <link rel="stylesheet" href="jsisweird.css"/>
     <script>
         const zero = '+[]';
         const one = '+!![]';
@@ -50,15 +51,18 @@
 
         let userInput = prompt("Please enter something:");
 
-        document.write('Input was: ' + userInput +
-            '<br/>Raw:<br/>' +
-            compile(userInput) +
-            '<br/>Pre-wrapped in console.log:<br/>' +
-            compile('console.log("' + userInput + '")'));
+        document.write('<div class="container">' +
+            'Input was: ' + userInput +
+            '<div class="output-box">' + compile(userInput) + '</div>' +
+            '</div>');
+
+        document.write('<div class="container">' +
+            'Pre-wrapped in console.log:' +
+            '<div class="output-box">' + compile('console.log("' + userInput + '")') + '</div>' +
+            '</div>');
     </script>
 </head>
 <body>
-<p>Please input your value</p>
 <noscript>Please enable javascript to view this page properly</noscript>
 </body>
 </html>
