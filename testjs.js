@@ -11,9 +11,18 @@ function testConsoleLog() {
     console.log("Test successful!");
 }
 
+let webpage;
+
 function testRickRoll() {
-    window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+    webpage = window.open("index.html");
 }
+
+function testWindowClose() {
+    if (webpage && !webpage.closed) {
+        webpage.close();
+    }
+}
+
 
 function testForLoop() {
     for (let i=1; i<=5; i++) {
