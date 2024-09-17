@@ -1,5 +1,5 @@
 function testInnerHTML(){
-    document.getElementById("test").innerHTML = "It worked!";
+    document.getElementById("test").innerHTML = "Test successful!";
 }
 
 function testAlert() {
