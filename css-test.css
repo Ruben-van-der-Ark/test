@@ -1,5 +1,5 @@
 button {
-    display: block;
+    /*display: block;*/
     margin: 2px;
 }
 
@@ -8,22 +8,24 @@ div {
     padding: 8px;
     background-color: lightgray;
     border-radius: 5px;
-    .color-test {
-        background-color: #FF0000;
-    }
+}
+
+.rect {
+    height: 20px;
+    width: 20%;
+    background-color: gray;
 }
 
 .square {
-    width: 20px;
+    width: 5%;
     height: 20px;
     background-color: gray;
 }
 
-input {
-    display: block;
+.color-test {
+    background-color: #FF0000;
 }
 
-textarea {
-    width: 100em;
-    height: 4em;
+input {
+    display: block;
 }
