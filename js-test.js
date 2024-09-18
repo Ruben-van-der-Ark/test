@@ -44,10 +44,11 @@ function testDraggable() {
 }
 
 function testEqualInputs() {
-    let input1 = document.getElementById("test-input1");
-    let input2 = document.getElementById("test-input2");
+    let input1 = document.getElementById("test-equal-input1");
+    let input2 = document.getElementById("test-equal-input2");
     document.getElementById('out-equal-inputs').innerHTML =
         input1.value === input2.value ? "Equal" : "Not equal";
+    console.log("test")
 }
 
 function testInputLength() {
