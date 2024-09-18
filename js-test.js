@@ -48,7 +48,6 @@ function testEqualInputs() {
     let input2 = document.getElementById("test-equal-input2");
     document.getElementById('out-equal-inputs').innerHTML =
         input1.value === input2.value ? "Equal" : "Not equal";
-    console.log("test")
 }
 
 function testInputLength() {
