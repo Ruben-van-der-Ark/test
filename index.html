@@ -7,45 +7,55 @@
     <script src="js-test.js"></script>
 </head>
 <body>
-    <div>
+    <div class="testInnerHTML">
         <p id="test-paragraph">This is a test</p>
         <button onclick="testInnerHTML()">Test innerHTML</button>
     </div>
 
-    <div>
+    <div class="testAlert">
         <button onclick="testAlert()">Test alert()</button>
     </div>
 
-    <div>
+    <div class="testConsoleLog">
         <button onclick="testConsoleLog()">Test console.log()</button>
     </div>
 
-    <div>
+    <div class="testWindows">
         <button onclick="testRickRoll()">Test window.open()</button>
         <button onclick="testWindowClose()">Test window.close()</button>
     </div>
 
-    <div>
+    <div class="testForLoops">
         <button onclick="testForLoop()">Test for loop</button>
     </div>
 
-    <div>
+    <div class="testDraggable">
         <button onclick="testDraggable()">Test draggable (toggle)</button>
-        <p id="test-draggable-bool">Not draggable</p>
+        <p id="out-draggable">Not draggable</p>
         <div id="test-draggable-div" class="square"></div>
     </div>
 
-    <div>
+    <div class="testEqualInputs">
         <label>
-            <input type="text" id="test-input1"/>
-            <input type="text" id="test-input2"/>
+            <input oninput="testEqualInputs()" type="text" id="test-equal-input1"/>
         </label>
+        <label>
+            <input oninput="testEqualInputs()" type="text" id="test-equal-input2"/>
+        </label>
+        <p id="out-equal-inputs">No input yet</p>
     </div>
 
-    <div>
-        <button onclick="testParams('red')">Red</button>
-        <button onclick="testParams('orange')">Orange</button>
-        <button onclick="testParams('green')">Green</button>
+    <div class="testInputLength">
+        <label>
+            <input oninput="testInputLength()" type="text" id="test-input-length"/>
+        </label>
+        <p id="out-input-length">No input yet</p>
+    </div>
+
+    <div class="testColor">
+        <button onclick="testColor('red')">Red</button>
+        <button onclick="testColor('orange')">Orange</button>
+        <button onclick="testColor('green')">Green</button>
         <div id="test-color" class="square color-test"></div>
     </div>
 </body>
