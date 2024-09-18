@@ -1,4 +1,6 @@
-// via w3schools en zelf expirimenteren
+// via w3schools en zelf experimenteren
+let webpage;
+
 function testInnerHTML() {
     document.getElementById("test").innerHTML = "Test successful!";
 }
@@ -10,8 +12,6 @@ function testAlert() {
 function testConsoleLog() {
     console.log("Test successful!");
 }
-
-let webpage;
 
 function testRickRoll() {
     webpage = window.open("index.html");
