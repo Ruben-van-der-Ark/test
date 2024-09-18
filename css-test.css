@@ -22,3 +22,8 @@ div {
 input {
     display: block;
 }
+
+textarea {
+    width: 100em;
+    height: 4em;
+}
