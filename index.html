@@ -1,23 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Tests</title>
-  <link rel="stylesheet" href="csstest.css"/>
-  <script src="testjs.js"></script>
+    <meta charset="UTF-8">
+    <title>Tests</title>
+    <link rel="stylesheet" href="css-test.css"/>
+    <script src="js-test.js"></script>
 </head>
 <body>
-  <p id="test">This is a test</p>
-  <button onclick="testInnerHTML()" class="related">Test innerHTML</button>
+    <div>
+        <p id="test-paragraph">This is a test</p>
+        <button onclick="testInnerHTML()">Test innerHTML</button>
+    </div>
 
-  <button onclick="testAlert()">Test alert()</button>
+    <div>
+        <button onclick="testAlert()">Test alert()</button>
+    </div>
 
-  <button onclick="testConsoleLog()">Test console.log()</button>
+    <div>
+        <button onclick="testConsoleLog()">Test console.log()</button>
+    </div>
 
-  <button onclick="testRickRoll()">Test window.open()</button>
+    <div>
+        <button onclick="testRickRoll()">Test window.open()</button>
+        <button onclick="testWindowClose()">Test window.close()</button>
+    </div>
 
-  <button onclick="testWindowClose()" class="related">Test window.close()</button>
+    <div>
+        <button onclick="testForLoop()">Test for loop</button>
+    </div>
 
-  <button onclick="testForLoop()">Test for loop</button>
+    <div>
+        <button onclick="testDraggable()">Test draggable (toggle)</button>
+        <p id="test-draggable-bool">Not draggable</p>
+        <div id="test-draggable-div" class="square"></div>
+    </div>
+
+    <div>
+        <label>
+            <input type="text" id="test-input1"/>
+            <input type="text" id="test-input2"/>
+        </label>
+    </div>
+
+    <div>
+        <button onclick="testParams('red')">Red</button>
+        <button onclick="testParams('orange')">Orange</button>
+        <button onclick="testParams('green')">Green</button>
+        <div id="test-color" class="square color-test"></div>
+    </div>
 </body>
 </html>
