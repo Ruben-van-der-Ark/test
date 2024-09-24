@@ -1,7 +1,7 @@
 // via w3schools en zelf experimenteren
 let webpage;
 
-// test voor .innerHTML
+// test voor element.innerHTML
 function testInnerHTML() {
     document.getElementById("test-paragraph").innerHTML = "Test successful!";
 }
@@ -21,8 +21,9 @@ function testConsoleLog() {
 function testRickRoll() {
     webpage = window.open("index.html");
 }
-// close website
+// sluit geopende website
 function testWindowClose() {
+    // als de website is geïnitialiseerd en niet al is gesloten
     if (webpage && !webpage.closed) {
         webpage.close();
     }
@@ -71,22 +72,24 @@ function testInputLength() {
 function testColor(color) {
     let colordiv = document.getElementById('test-color')
 
-    // // optie 1
-    // switch (color) {
-    //     case 'red':
-    //         colordiv.style.backgroundColor = "#FF0000";
-    //         break;
-    //     case 'orange':
-    //         colordiv.style.backgroundColor = "#FFAA00";
-    //         break;
-    //     case 'green':
-    //         colordiv.style.backgroundColor = "#00FF00";
-    //         break;
-    //     default:
-    //         break;
-    // }
+    // optie 1
+    switch (color) {
+        case 'red':
+            colordiv.style.backgroundColor = "#FF0000";
+            break;
+        case 'orange':
+            colordiv.style.backgroundColor = "#FFAA00";
+            break;
+        case 'green':
+            colordiv.style.backgroundColor = "#00FF00";
+            break;
+        default:
+            colordiv.style.backgroundColor = "#999999";
+            break;
+    }
 
-    // optie 2
-    let colors = {'red': "#FF0000", 'orange': "#FFAA00", 'green': "#00FF00"};
-    colordiv.style.backgroundColor = colors[color];
+    // // optie 2
+    // let colors = {'red': "#FF0000", 'orange': "#FFAA00", 'green': "#00FF00"};
+    // // the color inputted if it is in the colors dict above, or gray otherwise
+    // colordiv.style.backgroundColor = color in colors ? colors[color] : '#999999';
 }

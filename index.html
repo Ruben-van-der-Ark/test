@@ -48,7 +48,8 @@
 
     <div class="testInputLength">
         <label>
-            <textarea placeholder="Text goes here..." cols=50 rows=5 oninput="testInputLength()" id="test-input-length"></textarea>
+            <textarea placeholder="Text goes here..." cols=50 rows=5
+                      oninput="testInputLength()" id="test-input-length"></textarea>
         </label>
         <p id="out-input-length">...length appears here</p>
     </div>
@@ -57,6 +58,7 @@
         <button onclick="testColor('red')">Red</button>
         <button onclick="testColor('orange')">Orange</button>
         <button onclick="testColor('green')">Green</button>
+        <button onclick="testColor('default')">Default</button>
         <div id="test-color" class="rect color-test"></div>
     </div>
 </body>
