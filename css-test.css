@@ -1,0 +1,31 @@
+button {
+    /*display: block;*/
+    margin: 2px;
+}
+
+div {
+    margin: 8px 4px 8px 4px;
+    padding: 8px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+.rect {
+    height: 20px;
+    width: 20%;
+    background-color: gray;
+}
+
+.square {
+    width: 5%;
+    height: 20px;
+    background-color: gray;
+}
+
+.color-test {
+    background-color: #999999;
+}
+
+input {
+    display: block;
+}

@@ -1,24 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Tests</title>
-  <link rel="stylesheet" href="csstest.css"/>
-  <script src="testjs.js"></script>
+    <meta charset="UTF-8">
+    <title>Tests</title>
+    <link rel="stylesheet" href="css-test.css"/>
+    <script src="js-test.js"></script>
 </head>
 <body>
-  <p id="test">This is a test</p>
-  <button onclick="testInnerHTML()">Test innerHTML</button>
+    <div class="testInnerHTML">
+        <p id="test-paragraph">This is a test</p>
+        <button onclick="testInnerHTML()">Test innerHTML</button>
+    </div>
 
-  <button onclick="testAlert()">Test alert()</button>
+    <div class="testAlert">
+        <button onclick="testAlert()">Test alert()</button>
+    </div>
 
-  <button onclick="testConsoleLog()">Test console.log()</button>
+    <div class="testConsoleLog">
+        <button onclick="testConsoleLog()">Test console.log()</button>
+    </div>
 
-  <button onclick="testRickRoll()">Test window.open()</button>
+    <div class="testWindows">
+        <button onclick="testRickRoll()">Test window.open()</button>
+        <button onclick="testWindowClose()">Test window.close()</button>
+    </div>
 
-  <button onclick="testWindowClose()" class="related">Test window.close()</button>
+    <div class="testForLoops">
+        <button onclick="testForLoop()">Test for loop</button>
+    </div>
 
-  <button onclick="testForLoop()">Test for loop</button>
+    <div class="testDraggable">
+        <button onclick="testDraggable()">Test draggable (toggle)</button>
+        <p id="out-draggable">Not draggable</p>
+        <div id="test-draggable-div" class="square"></div>
+    </div>
 
+    <div class="testEqualInputs">
+        Equal?
+        <label>
+            <input oninput="testEqualInputs()" type="text" id="test-equal-input1"/>
+        </label>
+        <label>
+            <input oninput="testEqualInputs()" type="text" id="test-equal-input2"/>
+        </label>
+        <p id="out-equal-inputs">No input yet</p>
+    </div>
+
+    <div class="testInputLength">
+        <label>
+            <textarea placeholder="Text goes here..." cols=50 rows=5
+                      oninput="testInputLength()" id="test-input-length"></textarea>
+        </label>
+        <p id="out-input-length">...length appears here</p>
+    </div>
+
+    <div class="testColor">
+        <button onclick="testColor('red')">Red</button>
+        <button onclick="testColor('orange')">Orange</button>
+        <button onclick="testColor('green')">Green</button>
+        <button onclick="testColor('default')">Default</button>
+        <div id="test-color" class="rect color-test"></div>
+    </div>
 </body>
 </html>

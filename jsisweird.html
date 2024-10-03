@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Js is weird</title>
+    <link rel="stylesheet" href="jsisweird.css"/>
+    <script>
+        const zero = '+[]';
+        const one = '+!![]';
+
+        const number = n => {
+            if (n === 0)s return zero;
+            return Array.from({length: n}, () => one).join(' + ');
+        }
+
+        // C
+
+        const map = {};
+
+        const fromString = s =>s.split('').map(x => {
+            if (!(x in map)) {
+                const charCode = x.charCodeAt(0);
+                return `([]+[])[${fromString('constructor')}][${fromString('fromCharCode')}](${number(charCode)})`;
+            }
+            return map[x];
+        }).join('+');
+
+        map.a = `(+{}+[])[${number(1)}]`;
+        map.b = `({}+[])[${number(2)}]`;
+        map.o = `({}+[])[${number(1)}]`;
+        map.e = `({}+[])[${number(4)}]`;
+        map.c = `({}+[])[${number(5)}]`;
+        map.t = `({}+[])[${number(6)}]`;
+        map[' '] = `({}+[])[${number(7)}]`;
+        map.f = `(![]+[])[${number(0)}]`;
+        map.s = `(![]+[])[${number(3)}]`;
+        map.r = `(!![]+[])[${number(1)}]`;
+        map.u = `(!![]+[])[${number(2)}]`;
+        map.i = `((+!![]/+[])+[])[${number(3)}]`;
+        map.n = `((+!![]/+[])+[])[${number(4)}]`;
+        map.S = `([]+([]+[])[${fromString('constructor')}])[${number(9)}]`;
+        map.g = `([]+([]+[])[${fromString('constructor')}])[${number(14)}]`;
+        map.p = `([]+(/-/)[${fromString('constructor')}])[${number(14)}]`;
+        map['\\'] = `(/\\\\/+[])[${number(1)}]`;
+        map.d = `(${number(13)})[${fromString('toString')}](${number(14)})`;
+        map.h = `(${number(17)})[${fromString('toString')}](${number(18)})`;
+        map.m = `(${number(22)})[${fromString('toString')}](${number(23)})`;
+        map.C = `((()=>{})[${fromString('constructor')}](${fromString('return escape')})()(${map['\\']}))[${number(2)}]`;
+
+        const compile = code => `(()=>{})[${fromString('constructor')}](${fromString(code)})()`;
+
+        let userInput = prompt("Please enter something:");
+
+        document.write('<div class="container">' +
+            'Input was: ' + userInput +
+            '<div class="output-box">' + compile(userInput) + '</div>' +
+            '</div>');
+
+        document.write('<div class="container">' +
+            'Pre-wrapped in console.log:' +
+            '<div class="output-box">' + compile('console.log("' + userInput + '")') + '</div>' +
+            '</div>');
+    </script>
+</head>
+<body>
+<noscript>Please enable javascript to view this page properly</noscript>
+<footer>
+    All major javascript was directly copied from the GitHub in the description of this video:
+    <a href="https://www.youtube.com/watch?v=sRWE5tnaxlI">https://www.youtube.com/watch?v=sRWE5tnaxlI</a>
+</footer>
+</body>
+</html>
